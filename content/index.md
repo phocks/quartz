@@ -1,9 +1,8 @@
 ---
-title: Welcome to Quartz
+title: Hello World!
 ---
-Hello World!
 
-This will be my development Digital Garden, where I will store code snippets etc and write about building software (mostly in JS but also in Rust etc).
+This will be my development Digital Garden, where I will store code snippets etc and write about building software (mostly in JavaScript but also in Rust etc).
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+You can also find me [elsewhere](https://josh.is-cool.dev) on the Internet.
+
