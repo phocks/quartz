@@ -6,17 +6,53 @@ import * as Plugin from "./quartz/plugins"
  *
  * See https://quartz.jzhao.xyz/configuration for more information.
  */
+
+const possiblePageTitles = [
+  "(｡•ㅅ•｡)~✧",
+  "૭( ᵕ•̀ᵕ•́૭)",
+  "(૭ •́ ᵕ•̀ )૭",
+  "(๑>؂·̀๑)",
+  "৻(•̀ᗜ•́৻)",
+  "٩(•̤̀ᵕ•̤́๑)",
+  "(｡•́︿•̀｡)",
+  "ᕙ( •̀ ᗜ •́ )ᕗ",
+  "(๑•́ ₃ •̀๑)",
+  "(づ ̄ ³ ̄)づ",
+  "( ˵ •̀ ᴗ •́˵)",
+  "(๑•́o•̀๑)",
+  "٩(๑❛ᴗ❛๑)6",
+  "(╥﹏╥)",
+  "( ˘ ³˘(◡‿◡˶)",
+  "٩(๑˘•ω•˘๑)٩",
+  "૮ ˶ᵔ ᵕ ᵔ˶ ა",
+  "(˶˃ ᵕ ˂˶).ᐟ",
+  "ദ്ദി •⩊• )",
+  "꒰ᐢ. .ᐢ꒱₊˚⊹",
+  "Ꮺ ָ࣪ ۰ ͙⊹",
+  "˚ʚ♡ɞ˚",
+  "𓂃 ࣪⋆💿˚ ༘",
+  "⸜(｡˃ ᵕ ˂ )⸝♡",
+  "`⎚⩊⎚´ -✧",
+  "(˶˃ ᵕ ˂˶)~✧",
+  "(๑>⋆<๑)~✧",
+  "(˵•̀ ᴗ •́˵)~✧",
+  "(૮ ᵕ•̀ )૮~✧",
+]
+function getRandomPageTitle(): string {
+  return possiblePageTitles[Math.floor(Math.random() * possiblePageTitles.length)]
+}
+
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: getRandomPageTitle(),
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
-    locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    locale: "en-GB",
+    baseUrl: "quartz.byrd.ws",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
