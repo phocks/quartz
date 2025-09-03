@@ -1,6 +1,13 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
+const breadcrumbOptions = {
+  spacerSymbol: "▷", // symbol between crumbs
+  rootName: "🏠", // name of first/root element
+  resolveFrontmatterTitle: true, // whether to resolve folder names through frontmatter titles
+  showCurrentPage: true, // whether to display the current page in the breadcrumbs
+}
+
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
@@ -18,15 +25,8 @@ export const sharedPageComponents: SharedLayout = {
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ConditionalRender({
-      component: Component.Breadcrumbs(
-        {
-          spacerSymbol: "▷", // symbol between crumbs
-          rootName: "🏠", // name of first/root element
-          resolveFrontmatterTitle: true, // whether to resolve folder names through frontmatter titles
-          showCurrentPage: true, // whether to display the current page in the breadcrumbs
-        }
-      ),
-      condition: (page) => page.fileData.slug !== "index",
+      component: Component.Breadcrumbs(breadcrumbOptions),
+      condition: (page) => true //page.fileData.slug !== "index",
     }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
@@ -56,7 +56,7 @@ export const defaultContentPageLayout: PageLayout = {
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
+  beforeBody: [Component.Breadcrumbs(breadcrumbOptions), Component.ArticleTitle(), Component.ContentMeta()],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
