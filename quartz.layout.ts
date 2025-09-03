@@ -2,7 +2,7 @@ import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
 const breadcrumbOptions = {
-  spacerSymbol: "▷", // symbol between crumbs
+  spacerSymbol: "›", // symbol between crumbs
   rootName: "🏠", // name of first/root element
   resolveFrontmatterTitle: true, // whether to resolve folder names through frontmatter titles
   showCurrentPage: true, // whether to display the current page in the breadcrumbs
