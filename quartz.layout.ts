@@ -20,7 +20,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ConditionalRender({
       component: Component.Breadcrumbs(
         {
-          spacerSymbol: "/", // symbol between crumbs
+          spacerSymbol: "▷", // symbol between crumbs
           rootName: "🏠", // name of first/root element
           resolveFrontmatterTitle: true, // whether to resolve folder names through frontmatter titles
           showCurrentPage: true, // whether to display the current page in the breadcrumbs
