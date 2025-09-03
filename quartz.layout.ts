@@ -18,7 +18,14 @@ export const sharedPageComponents: SharedLayout = {
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ConditionalRender({
-      component: Component.Breadcrumbs(),
+      component: Component.Breadcrumbs(
+        {
+          spacerSymbol: ">", // symbol between crumbs
+          rootName: "🏠", // name of first/root element
+          resolveFrontmatterTitle: true, // whether to resolve folder names through frontmatter titles
+          showCurrentPage: true, // whether to display the current page in the breadcrumbs
+        }
+      ),
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.ArticleTitle(),
