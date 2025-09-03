@@ -15,8 +15,8 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      GitHub: "https://github.com/phocks/quartz",
+      Mastodon: "https://bne.social/@phocks",
     },
   }),
 }
@@ -26,7 +26,7 @@ export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ConditionalRender({
       component: Component.Breadcrumbs(breadcrumbOptions),
-      condition: (page) => page && true //page.fileData.slug !== "index",
+      condition: (page) => page && true, //page.fileData.slug !== "index",
     }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
@@ -56,7 +56,11 @@ export const defaultContentPageLayout: PageLayout = {
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(breadcrumbOptions), Component.ArticleTitle(), Component.ContentMeta()],
+  beforeBody: [
+    Component.Breadcrumbs(breadcrumbOptions),
+    Component.ArticleTitle(),
+    Component.ContentMeta(),
+  ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
