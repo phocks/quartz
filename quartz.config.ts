@@ -45,7 +45,7 @@ function getRandomPageTitle(): string {
 const config: QuartzConfig = {
   configuration: {
     pageTitle: getRandomPageTitle(),
-    pageTitleSuffix: " | Josh's Notebook",
+    pageTitleSuffix: " \u2014 Josh's Notebook",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
