@@ -1,5 +1,8 @@
 ---
 title: Hello World!
+subtitle: info dump website
+tags:
+  - hello
 ---
 
 This will be my development Digital Garden, where I will store code snippets etc and write about building software (mostly in JavaScript but also in Rust etc).
