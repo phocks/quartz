@@ -1,4 +1,5 @@
 ---
-title: About me
+title: About this space
+created: 2025-09-05
 ---
-Hello, my name is Josh.
+This is a digital garden type thing.
