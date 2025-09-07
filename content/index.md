@@ -1,10 +1,6 @@
 ---
-title: Hello World!
-subtitle: info dump website
-tags:
-  - hello
-  - world
+title: A garden must start somewhere
+description: A home page on the Internet
+date: 2025-09-03
 ---
-This will be my development Digital Garden, where I will store code snippets etc and write about building software (mostly in JavaScript but also in Rust etc).
-
-You can also find me [elsewhere](https://josh.is-cool.dev) on the Internet.
+And here it is. A beginning.
