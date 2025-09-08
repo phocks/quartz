@@ -15,7 +15,7 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/phocks/quartz",
+      Source: "https://github.com/phocks/quartz",
       Mastodon: "https://bne.social/@phocks",
     },
   }),
@@ -48,7 +48,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer(),
   ],
   right: [
-    Component.Graph(),
+    // Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
